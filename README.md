@@ -8,11 +8,9 @@
 
 <td>
 
-| Command Line Tools | Workflows 
-|--|--
-| 6 | 1 
+Command Line Tools | Workflows
+--|--
+6 | 1 
 
-</td><td>
-
-
-</td></tr> </table>
+</td></tr> 
+</table>
