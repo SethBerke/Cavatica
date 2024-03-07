@@ -1,5 +1,7 @@
-# Cavatica_gTDT
+### Dr. Ruczinski Lab 
+*We seek to analyze data from Family Trios to identify Sex-Specific Effects of Genetic Variants on conditions of interest.*
 
+ ---
 <table>
 <tr>
 <th>Quick Stats!</th>
@@ -15,10 +17,7 @@ Command Line Tools | Workflows
 </td></tr> 
 </table>
 
-### Dr. Ruczinski Lab 
-*We seek to analyze data from Family Trios to identify Sex-Specific Effects of Genetic Variants on conditions of interest.*
 
- ---
 
 ##### Johns Hopkins School of Public Health
 
@@ -39,8 +38,9 @@ Command Line Tools | Workflows
      
      Output:
      - results-chr##.txt
+-----
 
-####Apps:
+#####Apps:
 
 -----
 
