@@ -1,1 +1,0 @@
-Rscript ./gTDT.R /path/to/input_ped.ext /path/to/input_sex.ext /path/to/input_vcf.ext > stdout.out

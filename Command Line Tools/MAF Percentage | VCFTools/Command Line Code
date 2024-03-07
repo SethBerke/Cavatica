@@ -1,1 +1,0 @@
-vcftools --vcf /path/to/input_vcf.ext --keep /path/to/input_parents.ext --freq --out input_vcf.ext.mafpct > stdout.out

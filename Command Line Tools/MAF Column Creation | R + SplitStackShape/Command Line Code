@@ -1,1 +1,0 @@
-Rscript ./MAFColumnCreation.R /path/to/input_MAF_info.ext > stdout.out
