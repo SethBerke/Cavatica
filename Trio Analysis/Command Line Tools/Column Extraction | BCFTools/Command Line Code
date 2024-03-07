@@ -1,0 +1,1 @@
+bcftools query -f '%CHROM %POS %ID %REF %ALT\n' /path/to/input_vcf_filtered.ext --out input_vcf_filtered.ext.columns.txt > stdout.out

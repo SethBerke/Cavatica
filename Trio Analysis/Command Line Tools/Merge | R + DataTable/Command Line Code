@@ -1,0 +1,1 @@
+Rscript ./Merge.R /path/to/input_columns.ext /path/to/input_MAF.ext /path/to/input_results.ext > stdout.out
