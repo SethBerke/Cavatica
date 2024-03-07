@@ -4,7 +4,7 @@
  ---
 <table>
 <tr>
-<th>Quick Stats!</th>
+<th>Included:</th>
 </tr>
 <tr>
 
