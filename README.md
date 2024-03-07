@@ -19,7 +19,7 @@ Command Line Tools | Workflows
 
 
 
-#### Johns Hopkins School of Public Health
+### Johns Hopkins School of Public Health
 
      Ingo Ruczinski (PI)
      Kanika Kanchan (Research Associate)
@@ -27,7 +27,7 @@ Command Line Tools | Workflows
 
 -----
 
-#### i/o
+### i/o
 
      Input:
      - single chromosome .vcf
