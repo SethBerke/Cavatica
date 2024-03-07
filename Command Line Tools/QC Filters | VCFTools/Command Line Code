@@ -1,0 +1,1 @@
+vcftools --recode --recode-INFO-all --gzvcf /path/to/input_vcf.ext --remove /path/to/input_drop.ext --maf 0.01 --max-missing 0.80 --hwe 0.000001 --out input_id-string-value.input_vcf.ext.cleanFiles > stdout.out
