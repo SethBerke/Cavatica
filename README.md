@@ -1,28 +1,14 @@
-## Dr. Ruczinski Lab 
+# Dr. Ruczinski Lab
+## Johns Hopkins School of Public Health, Biostatistics Department
 *We seek to analyze data from Family Trios to identify Sex-Specific Effects of Genetic Variants on conditions of interest.*
 
  ---
-<table>
-<tr>
-<th>Included:</th>
-</tr>
-<tr>
-
-<td>
-
-Command Line Tools | Workflows
---|--
-6 | 1 
-
-</td></tr> 
-</table>
 
 
-
-### Johns Hopkins School of Public Health
+### Lab Members
 
      Ingo Ruczinski (PI)
-     Kanika Kanchan (Research Associate)
+     Kanika Kanchan (Post-Doctoral Researcher)
      Seth Berke (Student)
 
 -----
@@ -40,6 +26,16 @@ Command Line Tools | Workflows
      - results-chr##.txt
 
 ### Apps:
+
+<table>
+<tr><td>
+
+Command Line Tools | Workflows
+--|--
+6 | 1 
+
+</td></tr> 
+</table>
 
 -----
 
