@@ -1,0 +1,1 @@
+vcftools --gzvcf /path/to/input.ext --remove-indels --remove-filtered-all --min-alleles 2 --max-alleles 2 --min-meanDP 10 --minQ 20 --minGQ 20 --minDP 10 --recode --out input.ext > stdout.out
