@@ -1,6 +1,9 @@
 # Dr. Ruczinski Lab
 ## Johns Hopkins School of Public Health, Biostatistics Department
+
 *A Custom Cloud Analysis to identify Sex-Specific differences in Genetic Loci correlated with Orofacial Clefts.*
+
+*Here is a link to videos that outline key steps in Tool, Workflow, and Task Creation & Execution: *
 
  ---
 
