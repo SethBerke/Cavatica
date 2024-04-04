@@ -1,0 +1,1 @@
+plink --vcf /path/to/input.ext --make-bed --out input.ext.plink > stdout.out
