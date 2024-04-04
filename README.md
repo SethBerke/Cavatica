@@ -41,29 +41,29 @@ Command Line Tools | Workflows
 
 -----
 
-***QC Filters:*** a CLT that filters SNPs based on minor alleles, missingness, and HWE.
+***QC Filters:*** a tool that filters SNPs based on minor alleles, missingness, and HWE.
 
 -----
 
-***Column Extraction:*** a CLT that extracts the first five columns of a vcf file (%CHROM %POS %ID %REF %ALT).
+***Column Extraction:*** a tool that extracts the first five columns of a vcf file (%CHROM %POS %ID %REF %ALT).
 
 -----
 
-***gTDT:*** a CLT that provides statistics on GxE interaction term for Trio Data.
+***gTDT:*** a tool that provides statistics on GxE interaction term for Trio Data.
 
 -----
 
 
-***MAF Percentage:*** a CLT that derives allele information and frequency from vcf files.
+***MAF Percentage:*** a tool that derives allele information and frequency from vcf files.
 
 -----
 
-***MAF Column Creation:*** a CLT that outputs the MAF for the parents in the cohort.
+***MAF Column Creation:*** a tool that outputs the MAF for the parents in the cohort.
 
 -----
 
-***Merge:*** a CLT that combines SNP information, MAF results, and gTDT findings.
+***Merge:*** a tool that combines SNP information, MAF results, and gTDT findings.
 
 -----
 
-***Trio Pipeline .vcf:*** a Workflow that combines the above apps to yield GxE values for trio data.
+***Trio Pipeline .vcf:*** a workflow that combines the above apps to yield GxE values for trio data.
