@@ -1,0 +1,1 @@
+plink --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --merge-list /path/to/input_merge_list.ext --make-bed --out "PhilippinesLDPruned.merged" > stdout.out
