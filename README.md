@@ -1,9 +1,9 @@
-# Dr. Ruczinski Lab
+# Ruczinski Lab
 ## Johns Hopkins School of Public Health, Biostatistics Department
 
-*A Custom Cloud Analysis to identify Sex-Specific differences in Genetic Loci correlated with Orofacial Clefts.*
+*A custom cloud analysis to identify sex-specific effects in genetic loci underlying orofacial cleft risk.*
 
-*Here is a link to videos that outline key steps in Tool, Workflow, and Task Creation & Execution: *
+*Here is a link to videos that outline the key fundamentals for Docker, Tools, Workflows, and Tasks: https://biostat.jhsph.edu/~iruczins/cavatica/*
 
  ---
 
@@ -13,34 +13,6 @@
      Ingo Ruczinski (PI)
      Kanika Kanchan (Post-Doctoral Researcher)
      Seth Berke (Student)
-
------
-### i/o qc
-
-     Input:
-     - multi-sample, raw single chromosome with complete trios .vcf
-     
-     Output:
-     - basic QC-ed .vcf
-     - .imiss & .lmiss files
-     - .imendel
-     - .het
-     - .genome
-
-### i/o trio
-
-     Input:
-     - single chromosome .vcf
-     - samples to be dropped .txt
-     - pedigree.txt of the cohort, typically corresponds with a region
-     - sex.txt of the sexes of the samples of the cohort
-     - parent.txt with identifiers of the case's parents
-     - drop.txt with samples needing to be dropped
-     
-     Output:
-     - results-chr##.txt
-
------
 
 ### Apps:
 
@@ -111,21 +83,21 @@ Command Line Tools | Workflows
 
 -----
 
-***gTDT:*** a tool that provides statistics on GxE interaction term for Trio Data.
+***gTDT:*** a tool that provides statistics on GxE interaction term for trio data.
 
 -----
 
 
-***MAF Percentage:*** a tool that derives allele information and frequency from vcf files.
+***MAF Percentage:*** a tool that derives allele information and frequencies from vcf files.
 
 -----
 
-***MAF Column Creation:*** a tool that outputs the MAF for the parents in the cohort.
+***MAF Column Creation:*** a tool that outputs the MAF for the SNPs.
 
 -----
 
-***Merge:*** a tool that combines SNP information, MAF results, and gTDT findings.
+***Merge:*** a tool that combines SNP information and gTDT results.
 
 -----
 
-***Trio Pipeline .vcf:*** a workflow that combines the above apps to yield GxE values for trio data.
+***Trio Pipeline .vcf:*** a workflow that combines the above tools to yield GxE values for trio data.
