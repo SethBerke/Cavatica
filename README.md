@@ -12,7 +12,7 @@
 
      Ingo Ruczinski (PI)
      Kanika Kanchan (Post-Doctoral Researcher)
-     Seth Berke (Student)
+     Seth Berke (Research Assistant)
 
 ### Apps:
 
