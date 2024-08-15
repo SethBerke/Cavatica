@@ -29,75 +29,80 @@ Command Line Tools | Workflows
 -----
 ## QC:
 
-***Basic QC:*** a tool that filters based on proper number of alleles and depth reading.
+### Tools
+
+***Basic QC:*** Removing multi-allelic sites and indels, filtering sites with labels other than ‘PASS’, and removing variants and individual genotypes with low mean depth and low quality scores. The input is the multi-sample VCF file released by the sequencing center containing all complete trios. The cleaned output file is used in the subsequent calculation of other QC statistics and also as input for the gTDT analysis pipeline. 
 
 -----
 
-***PLINK File Creation:*** a tool that creates binary PLINK files from a vcf file.
+***PLINK File Creation:*** Creating binary PLINK files (.bed, .bim and .fam) to integrate the pedigree information into the QC steps for this family-based association study.
 
 -----
 
-***Summary Stats:*** a tool that outputs summary statistics important for assessing high missingness in samples
+***Summary Stats:*** Calculating variant statistics such as missing genotype calls per variant across all samples, and variant MAF and HWE. Variants that exhibit high genotype missingness, low MAF, or are significantly out of HWE are not included in the association analysis. Also calculating percent missing genotype calls for each sample. The output .lmiss and .imiss files contain the information to determine which samples are dropped due to their high genotype missingness.
 
 -----
 
-***Variant Filtering Creation:*** a tool that filters on the variant level for missingness, minor allele frequency, and Hardy-Weinberg Equilibrium.
+***Variant Filtering Creation:*** Generating updated PLINK files after removing trios with at least one sample showing high genotype missingness, and filtered on variant missingness, MAF and HWE. The input file "Drop High Missingness Samples.txt" was derived from the .lmiss and .imiss files.
 
 -----
 
-***Mendelian Error:*** a tool that filters outputs mendelian error statistics.
+***Mendelian Error:*** Calculating the percentage of Mendelian errors in the trios (proband genotypes that are incompatible with parental genotypes under Mendelian inheritance, assuming no de novo events) and generating a list of trios to be dropped from the gTDT analysis due to high error rates.
 
 -----
 
-***LD Pruning Part 1:*** a tool that prunes LD blocks.
+***LD Pruning Part 1:*** Deriving LD blocks of SNPs from the PLINK files, to be used in the following pruning step.
 
 -----
 
-***LD Pruning Part 2:*** a tool that creates PLINK files based on pruned files.
+***LD Pruning Part 2:*** Creating pruned binary PLINK files from LD block information for subsequent quality control.
 
 -----
 
-***PLINK File Merge:*** a tool that merges pruned files.
+***PLINK File Merge:*** Merging together pruned single-chromosome PLINK files into a whole-genome PLINK file.
 
 -----
 
-***Heterozygosity:*** a tool that creates a .het file.
+***Heterozygosity:*** Calculating sample SNP heterozygosity rates to detect potential issues such as sample contamination.
 
 -----
 
-***IBS:*** a tool that creates a .genome file to check for relatedness.
+***IBS:*** Calculating identity-by-descent estimates between pairs of samples to verify relatedness as given in the pedigree files.
 
 -----
+### Workflows
 
-***Quality Control:*** a workflow that identifiers samples to be dropped during trio analysis.
+***Quality Control:*** Cleaning gzVCFs and identifying samples to be dropped during trio analysis.
 
 -----
 
 ## Trio:
 
-***QC Filters:*** a tool that filters SNPs based on minor alleles, missingness, and HWE.
+### Tools
+
+**Variant Level QC:*** Reading the VCFs generated after basic QC, removing the trios failing QC, updating variant statistics (missingness, MAF and HWE) after removing these trios, and removing variants based on these updated statistics.
 
 -----
 
-***Column Extraction:*** a tool that extracts the first five columns of a vcf file (%CHROM %POS %ID %REF %ALT).
+***gTDT:*** Executing the gTDT with a interaction as implemented in the trio Bioconductor package. For this sex-specific case-parent trio analysis, the tool also reads the sex and pedigree information available in the metadata. 
 
 -----
 
-***gTDT:*** a tool that provides statistics on GxE interaction term for trio data.
+***MAF Percentage:*** Extracting the MAF information for the output file.
 
 -----
 
-
-***MAF Percentage:*** a tool that derives allele information and frequencies from vcf files.
-
------
-
-***MAF Column Creation:*** a tool that outputs the MAF for the SNPs.
+***Column Extraction:*** Extracting information using BCFTools for the final results output file, including chromosome, genomic position, rs number, REF and ALT alleles.
 
 -----
 
-***Merge:*** a tool that combines SNP information and gTDT results.
+***MAF Column Creation:*** Selecting either the REF or ALT allele as the minor allele based on observed allele frequencies, and creating the MAF column for the output file. 
 
 -----
 
-***Trio Pipeline .vcf:*** a workflow that combines the above tools to yield GxE values for trio data.
+***Merge:*** Merging all pieces of information into the final results output file.
+
+-----
+### Workflows
+
+***Trio Pipeline .vcf:*** Combining the above tools to yield GxE values for trio data.
