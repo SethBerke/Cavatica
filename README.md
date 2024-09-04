@@ -3,7 +3,7 @@
 
 *A custom cloud analysis to identify sex-specific effects in genetic loci underlying orofacial cleft risk.*
 
-*Here is a link to videos that outline the key fundamentals for Docker, Tools, Workflows, and Tasks: https://biostat.jhsph.edu/~iruczins/cavatica/*
+*Here is a link to videos that outline the key CAVATICA fundamentals for Project Spaces, Docker, Tools, Workflows, and Tasks: https://biostat.jhsph.edu/~iruczins/cavatica/*
 
  ---
 
@@ -21,7 +21,7 @@
 
 Command Line Tools | Workflows
 --|--
-16 | 2 
+19 | 2 
 
 </td></tr> 
 </table>
@@ -35,7 +35,11 @@ Command Line Tools | Workflows
 
 -----
 
-***PLINK File Creation:*** Creating binary PLINK files (.bed, .bim and .fam) to integrate the pedigree information into the QC steps for this family-based association study.
+***PLINK File Creation:*** Creating binary PLINK files (.bed, .bim and .fam) for the QC steps for this family-based association study.
+
+-----
+
+***Variant Filtering:*** Generating updated PLINK files filtered on variant missingness, MAF and HWE. 
 
 -----
 
@@ -43,7 +47,15 @@ Command Line Tools | Workflows
 
 -----
 
-***Variant Filtering Creation:*** Generating updated PLINK files after removing trios with at least one sample showing high genotype missingness, and filtered on variant missingness, MAF and HWE. The input file "Drop High Missingness Samples.txt" was derived from the .lmiss and .imiss files.
+***Update IIDs:*** Updating binary PLINK files with the correct individual IDs for each participant.
+
+-----
+
+***Update Pedigree Information:*** Updating binary PLINK files with the correct famlial relationships and genders.
+
+-----
+
+***Drop Samples:*** dropping trios that have participants with high missigness values.
 
 -----
 
@@ -51,7 +63,7 @@ Command Line Tools | Workflows
 
 -----
 
-***LD Pruning Part 1:*** Deriving LD blocks of SNPs from the PLINK files, to be used in the following pruning step.
+***LD Pruning Part 1:*** Deriving a list of variants from the PLINK files to be kept based on LD Structure.
 
 -----
 
@@ -59,7 +71,7 @@ Command Line Tools | Workflows
 
 -----
 
-***PLINK File Merge:*** Merging together pruned single-chromosome PLINK files into a whole-genome PLINK file.
+***PLINK File Merge:*** Merging together pruned single-chromosome PLINK files into a whole-genome merged file.
 
 -----
 
@@ -67,12 +79,12 @@ Command Line Tools | Workflows
 
 -----
 
-***IBS:*** Calculating identity-by-descent estimates between pairs of samples to verify relatedness as given in the pedigree files.
+***IBS:*** Calculating identity-by-state estimates between pairs of samples to verify relatedness as given in the pedigree files.
 
 -----
 ### Workflows
 
-***Quality Control:*** Cleaning gzVCFs and identifying samples to be dropped during trio analysis.
+***Quality Control:*** Basic variant filtering for gzVCFs and identifying samples to be dropped during trio analysis.
 
 -----
 
@@ -80,7 +92,7 @@ Command Line Tools | Workflows
 
 ### Tools
 
-**Variant Level QC:*** Reading the VCFs generated after basic QC, removing the trios failing QC, updating variant statistics (missingness, MAF and HWE) after removing these trios, and removing variants based on these updated statistics.
+***Variant Level QC:*** Reading the VCFs generated after basic QC, removing the trios failing QC, updating variant statistics (missingness, MAF and HWE) after removing these trios, and removing variants based on these updated statistics.
 
 -----
 
