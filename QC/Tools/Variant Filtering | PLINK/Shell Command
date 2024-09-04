@@ -1,1 +1,1 @@
-plink --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --keep-allele-order --geno 0.2 --maf 0.05 --hwe 0.000001 --remove /path/to/input_drop.ext --make-bed --out input_bed.ext.VarFilter > stdout.out
+plink --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --keep-allele-order --geno 0.2 --maf 0.05 --hwe 0.000001 --make-bed --out input_bed.ext.VarFilter > stdout.out
