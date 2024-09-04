@@ -1,0 +1,1 @@
+plink --out input_bed.ext --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --update-ids /path/to/input_IIDs.ext --make-bed > stdout.out
