@@ -1,0 +1,1 @@
+plink --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --update-parents /path/to/input_parents.ext --update-sex /path/to/input_sex.ext --make-bed --out input_bed.ext > stdout.out
