@@ -1,0 +1,1 @@
+plink --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --keep-allele-order --remove /path/to/input_drop.ext --make-bed --out input_bed.ext.DroppedSamples > stdout.out
