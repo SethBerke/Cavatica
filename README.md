@@ -39,11 +39,11 @@ Command Line Tools | Workflows
 
 -----
 
-***Variant Filtering:*** Generating updated PLINK files filtered on variant missingness, MAF and HWE. 
+***Summary Stats:*** Calculating variant statistics such as missing genotype calls per variant across all samples, and variant MAF and HWE. Variants that exhibit high genotype missingness, low MAF, or are significantly out of HWE are not included in the association analysis. Also calculating percent missing genotype calls for each sample. The output .lmiss and .imiss files contain the information to determine which samples are dropped due to their high genotype missingness.
 
 -----
 
-***Summary Stats:*** Calculating variant statistics such as missing genotype calls per variant across all samples, and variant MAF and HWE. Variants that exhibit high genotype missingness, low MAF, or are significantly out of HWE are not included in the association analysis. Also calculating percent missing genotype calls for each sample. The output .lmiss and .imiss files contain the information to determine which samples are dropped due to their high genotype missingness.
+***Variant Filtering:*** Generating updated PLINK files filtered on variant missingness, MAF and HWE. 
 
 -----
 
@@ -68,6 +68,10 @@ Command Line Tools | Workflows
 -----
 
 ***LD Pruning Part 2:*** Creating pruned binary PLINK files from LD block information for subsequent quality control.
+
+-----
+
+***Update SNP IDs:*** Updaing '.' SNPs with new ID based on chr and position.
 
 -----
 
