@@ -1,0 +1,1 @@
+plink --bed /path/to/input_bed.ext --bim /path/to/input_bim.ext --fam /path/to/input_fam.ext --make-bed --set-missing-var-ids @_# --out input_bed.ext.updatedIDs > stdout.out
