@@ -71,7 +71,7 @@ Command Line Tools | Workflows
 
 -----
 
-***Update SNP IDs:*** Updating '.' SNPs with new IDs based on chr and position.
+***Update SNP IDs:*** Updating '.' SNPs with new IDs based on chr and position for proper downstream merging.
 
 -----
 
