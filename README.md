@@ -71,7 +71,7 @@ Command Line Tools | Workflows
 
 -----
 
-***Update SNP IDs:*** Updaing '.' SNPs with new ID based on chr and position.
+***Update SNP IDs:*** Updating '.' SNPs with new IDs based on chr and position.
 
 -----
 
@@ -88,7 +88,7 @@ Command Line Tools | Workflows
 -----
 ### Workflows
 
-***Quality Control:*** Basic variant filtering for gzVCFs and identifying samples to be dropped during trio analysis.
+***Quality Control:*** Basic variant filtering for gzVCFs and identifying samples to be dropped during the gTDT case-parent trio analysis.
 
 -----
 
@@ -100,15 +100,15 @@ Command Line Tools | Workflows
 
 -----
 
-***gTDT:*** Executing the gTDT with a interaction as implemented in the trio Bioconductor package. For this sex-specific case-parent trio analysis, the tool also reads the sex and pedigree information available in the metadata. 
+***gTDT:*** Executing the gTDT with an interaction term as implemented in the trio Bioconductor package. For this sex-specific case-parent trio analysis, the tool also reads the sex and pedigree information available in the provided metadata helper files. 
 
 -----
 
-***MAF Percentage:*** Extracting the MAF information for the output file.
+***MAF Percentage:*** Deducing the minor allele frequencies from parental genotypes.
 
 -----
 
-***Column Extraction:*** Extracting information using BCFTools for the final results output file, including chromosome, genomic position, rs number, REF and ALT alleles.
+***Column Extraction:*** Extracting SNP information using BCFTools for the final results output file, including chromosome, genomic position, rs number, REF and ALT alleles.
 
 -----
 
@@ -121,4 +121,4 @@ Command Line Tools | Workflows
 -----
 ### Workflows
 
-***Trio Pipeline .vcf:*** Combining the above tools to yield GxE values for trio data.
+***Trio Pipeline .vcf:*** Combining the above tools to yield GxE values for case-parent trio data.
